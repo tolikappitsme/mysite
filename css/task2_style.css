@@ -1,0 +1,245 @@
+*{
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+.burger{
+	display: none;
+}
+menu{
+	margin: 0px 0px;
+	margin-bottom: 100px;
+	padding: 10px;
+	display: flex;
+justify-content: space-around;
+background-color: #CBFE0E;
+width: 100%;
+position: fixed;
+box-shadow: 2px 0px 5px grey;
+}
+.probel{
+	height: 70px;
+}
+menu .button{
+
+	padding: 10px 20px;
+	color: white;
+	background-color: black;
+	border-radius: 5px;
+font-size: 15pt;
+}
+menu .button:hover{
+	background-color:#FFFF00  ;
+	color: black;
+	box-shadow: 2px 2px 5px grey;
+}
+a{
+	text-decoration: none;
+}
+.main{
+	position: relative;
+color: #FF5733;
+
+	display: none;
+
+}
+.button:hover>.titel{
+	display: none;
+}
+.button:hover>.main{
+	padding: 0px 20px;
+	display: block;
+		animation-duration: 0.9s;
+  animation-name: point;
+  animation-iteration-count: 2;
+}
+.button:hover{
+	background-image:none;
+box-shadow: 2px 2px 5px grey;
+}
+@keyframes point{
+	0%{
+		top: 0px;
+	}
+50%{
+	top: -10px;
+	}
+	100%{
+		
+		top:0px;
+	}
+}
+.button:active>.main{
+	font-size: 15pt;
+	padding: 0px 16px;
+	display: block;
+	color: green;		
+}
+
+header i{
+	text-align: center;
+	margin: 50px 0px;
+	text-shadow: 2px 2px 5px gold;
+		font-size: 40pt;
+	color: white;
+	animation-duration: 2s;
+  animation-name: starttext;
+  animation-iteration-count: 1;
+}
+@keyframes starttext{
+	0%{
+		font-size: 0px;
+	}
+	100%{
+		text-shadow: 2px 2px 5px gold;
+		font-size: 40pt;
+	}
+}
+
+
+header{
+
+	display: flex;
+	justify-content: center;
+text-align: center;
+height: 1000px;
+	border-radius: 10px;
+	margin: 10px 200px;
+
+background-image: url(../img/photo_2020-10-20_14-36-19.jpg);
+background-size: cover;
+}
+
+
+main{
+	
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+text-align: center;
+ padding:0px 200px;
+
+}
+main>article{
+margin: 0px auto;
+	align-items: center;
+	text-align: center;
+	padding: 50px;
+	width: 100%;
+	height: 200px;
+	background-color: #CBFE0E ;
+	color:black;
+	border-radius: 10px;
+	margin:5px 0px;
+}
+.backcolor{
+	background-color: #f5c4b6;
+}
+.menu{
+	width: 860px;
+	height: 1300px;
+	border-radius: 10px;
+
+	margin: 10px auto;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+}
+.men{
+	width: 860px;
+	height: 1300px;
+	border-radius: 10px;
+
+	margin: -50px auto;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: center;
+margin-bottom: 20px;
+}
+.menuimg{
+	background-image: url(../img/menu1.jpg);
+background-size: cover;
+}
+.menuimg2{
+	background-image: url(../img/menu2.jpg);
+	background-size: cover;
+}
+
+iframe{
+	width: 100%;
+	height: 500px;
+}
+footer{
+	padding: 5px;
+	margin:5px;
+		background-color: #CBFE0E;
+	color: white;
+	border-radius: 10px;
+text-align: center;
+}
+/* Смартфоны (портретный и альбомный режимы) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 767px) {
+/* Сюда добавляем стили*/ 
+.probel{
+	display: none;
+}
+header{
+	height: 250px;
+	border-radius: 10px;
+	margin: 10px;
+	padding: 10px;
+
+}
+header i{
+	margin: 0px 0px;
+font-size: 15pt;
+}
+.menu{
+	width: auto;
+height:550px;
+margin: 5px 5px;
+}
+.men{
+	width: auto;
+height:550px;
+margin: 5px 5px;
+}
+menu{
+	display: none;
+	flex-direction: column;
+}
+menu>.button{
+	margin: 2px;
+	text-align: center;
+	font-size: 1.5em;
+}
+main{
+	padding: 0px 0px;
+	flex-direction: column;
+}
+main>article{
+	width: auto;
+	height: auto;
+	font-size: 1em;
+	margin: 5px 5px;
+}
+
+}
+/***Планшет***********/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1200px) {
+/* Сюда добавляем стили*/
+header{
+	background-color: orange;
+}
+main{
+	flex-wrap: nowrap;
+	flex-direction: row;
+}
+}	
+/****************************/
